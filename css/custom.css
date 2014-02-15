@@ -44,6 +44,20 @@ line-height: 1.3em;
 font-family: "Titillium Web" !important;
 }
 
+a {
+color: #08C;
+text-decoration: none;
+}
+
+li a {
+color: #000;
+text-decoration: none;
+font-size: 11px;
+}
+
+li a.active {
+color: #08C;
+}
 article p {
 font-size: 12px;
 }
@@ -103,6 +117,10 @@ background: #fff !important;
 background: #fff;
 }
 
+.main-menu-nav li li a.active {
+color: #FFF;
+}
+
 header {
 	font-size: 15px;
 	height: 108px;
@@ -110,7 +128,15 @@ header {
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #d7d7d7;
-	margin-bottom: 10px;
+	margin-bottom: 17px;
+}
+
+.node-title {
+margin-bottom: 10px !important;
+}
+
+.demo-request {
+margin-top: 37px;
 }
 
 header > div.row:nth-of-type(2n+0) > .span12 {
@@ -163,8 +189,10 @@ border-right: 0px solid #222;
 border-top: 0;
 color: #81A1C7;
 font-weight: bold;
-padding: 15px 20px;
+padding: 15px 0px 20px;
 text-shadow: none;
+margin: 0px 28px;
+font-weight: normal;
 }
 
 .tb-megamenu-main-menu .dropdown-menu li > a, .tb-megamenu-menu-top-menu .dropdown-menu li > a {
@@ -173,10 +201,12 @@ display: block !important;
 width: 95%;
 }
 
-.tb-megamenu-main-menu  .nav li.dropdown.open > .dropdown-toggle {
+
+
+.tb-megamenu-main-menu .nav li.dropdown.open > .dropdown-toggle {
 background-color: #FFF;
-color: #f8981f;
-border-bottom: 4px solid #81a1c7;
+color: #81A1C7 !important;
+border-bottom: 4px solid #81A1C7;
 }
 
 .tb-megamenu-main-menu .mega-dropdown-inner {
@@ -186,9 +216,9 @@ padding: 0px 20px;
 /*Menu links*/
 
 ul.menu li.active a, .main-menu-nav li.active a, .main-menu-nav li.active a:hover, .main-menu-nav li a:hover {
-background: #fff;
-color: #81a1c7 !important;
-border-bottom: 4px solid #81a1c7;
+background: none;
+color: #fff !important;
+border-bottom: 5px solid #81a1c7;
 }
 
 .main-menu-nav li a {
@@ -270,6 +300,23 @@ margin-left: 60px;
 
 /*Top menu styles*/
 
+#block-tb-megamenu-menu-top-menu .tb-megamenu .nav li.dropdown.active > .dropdown-toggle, #block-tb-megamenu-menu-top-menu .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle, #block-tb-megamenu-menu-top-menu .tb-megamenu .nav > li.dropdown.open.active > a:hover {
+background-color: #7DA7D7;
+border-color: #81A1C7;
+padding-bottom: 10px;
+padding-top: 7px;
+margin-top: -4px;
+}
+
+#block-tb-megamenu-menu-top-menu .tb-megamenu .nav > .active > a:hover, #block-tb-megamenu-menu-top-menu .tb-megamenu-menu-top-menu .nav > li.dropdown.open.active > a:hover {
+background-color: #7DA7D7;
+color: #FFF !important;
+padding-bottom: 10px;
+padding-top: 7px;
+margin-top: -4px;
+border:0px;
+}
+
 #block-menu-menu-top-menu ul.menu li a, .tb-megamenu-menu-top-menu ul.menu li a {
 	padding: 7px 6px;
 	color: #fff;
@@ -280,13 +327,14 @@ margin-left: 60px;
 
 .tb-megamenu-menu-top-menu .dropdown-menu {
 border-bottom: 0px solid #E65855;
+background:#7da7d7;
 }
 
 .tb-megamenu-menu-top-menu .nav > li > a {
 border-right: 1px solid #fff;
 border-top: 0;
 color: #fff;
-padding: 0px 9px;
+padding: 0px 11px;
 text-shadow: none;
 background: #f8981f;
 margin: 3px 0px;
@@ -326,6 +374,23 @@ background:#f8981f;
 	color: #fff !important;
 }
 
+.tb-megamenu-menu-top-menu ul.menu li.active a, .tb-megamenu-menu-top-menu .main-menu-nav li.active a, .tb-megamenu-menu-top-menu .main-menu-nav li.active a:hover, .tb-megamenu-menu-top-menu .main-menu-nav li a:hover {
+background: #fff;
+color: #81a1c7 !important;
+border-bottom: 5px solid #81a1c7;
+}
+
+/*.tb-megamenu-menu-top-menu ul.menu li.active a, .tb-megamenu-menu-top-menu li.active a, .tb-megamenu-menu-top-menu li.active a:hover, .tb-megamenu-menu-top-menu li a:hover {
+background: #81a1c7;
+color: #fff !important;
+border-bottom: 5px solid #81a1c7;
+}*/
+
+.tb-megamenu-menu-top-menu .dropdown-menu a:hover, .tb-megamenu-menu-top-menu .dropdown-menu a:hover {
+background-color: none !important;
+color: #FFF !important;
+}
+
 .tb-megamenu .nav > .active > a:hover, .tb-megamenu-menu-top-menu .nav > li.dropdown.open.active > a:hover {
 	background-color: #7ea6d7;
 	color: #fff !important;
@@ -342,8 +407,12 @@ margin: 0;
 padding: 0px 0px;
 }
 
+.tb-megamenu-menu-top-menu  .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child {
+margin-top: -3px;
+}
+
 .tb-megamenu-menu-top-menu .dropdown-menu li:first-child > a {
-background-image: url(/sites/theorem.drupalflex.com/themes/theorem/images/dominican-republic.png) !important;
+background-image: url(../images/dominican-republic.png) !important;
 background-repeat: no-repeat !important;
 background-position: left center !important;
 }
@@ -385,7 +454,6 @@ display: none;
 	max-width: 100%;
 padding: 0px;
 margin-top: 0px !important;
-border-bottom: 20px solid #f59735;
 }
 
 #page-wrap {
@@ -396,8 +464,7 @@ margin: 0px !important;
 margin-right: 0px;
 padding-right: 0px;
 width: 100%;
-border-bottom: 20px solid #f59735;
-padding-bottom: 50px;
+border-bottom: 0px solid #f59735;
 }
 
 /*Content system*/
@@ -440,6 +507,9 @@ margin-bottom: 2em;
 display: none;
 }
 
+.sidebar-first #block-easy-breadcrumb-easy-breadcrumb {
+margin-left: 5px;
+}
 /*Services block*/
 
 #block-views-nodequeue-1-block h2 {
@@ -486,7 +556,7 @@ margin-bottom:33px;
 	padding-top: 30px;
 	background-image: url(../images/png.png);
 	background-repeat: no-repeat;
-	margin-top: -18px;
+	margin-bottom: -33px;
 }
 
 #block-views-nodequeue-1-block .views-row-1, #block-views-nodequeue-1-block.views-row-2 {
@@ -496,21 +566,13 @@ margin-right: 100px;
 #block-views-nodequeue-1-block .views-row-1, #block-views-nodequeue-1-block .views-row-2, #block-views-nodequeue-1-block .views-row-3 {
 width: 230px;
 float: left;
+height: 141px;
 }
 
 #block-views-nodequeue-1-block .views-row-1, #block-views-nodequeue-1-block .views-row-2 {
 margin-right: 100px;
 }
 
-#block-views-nodequeue-1-block .views-row-1, #block-views-nodequeue-1-block .views-row-2, #block-views-nodequeue-1-block .views-row-3 {
-width: 230px;
-float: left;
-}
-
-#block-views-nodequeue-1-block .views-row-1, #block-views-nodequeue-1-block .views-row-2, #block-views-nodequeue-1-block .views-row-3 {
-width: 230px;
-float: left;
-}
 
 #block-views-nodequeue-1-block .views-row-4 {
 margin-right: 100px;
@@ -532,16 +594,17 @@ float: left;
 #block-views-nodequeue-2-block {
 	background-size: 100% 476px;
 	min-height: 446px;
-	padding-top: 30px;
+	padding-top: 58px;
 	background-image: url(../images/industries-bg.png);
 	background-repeat: no-repeat;
-	margin-top: -36px;
+	margin-bottom: -69px;
 }
 
 /*patch for the white gap*/
 .front .span12 {
-background: url(/sites/theorem.drupalflex.com/themes/theorem/images/industries-bg.png) no-repeat 0px 100%;
+/*background: url(/sites/theorem.drupalflex.com/themes/theorem/images/industries-bg.png) no-repeat 0px 100%;*/
 }
+
 
 #block-views-nodequeue-2-block .view-header {
 width: 670px;
@@ -575,10 +638,11 @@ display: block;
 #block-views-nodequeue-2-block h2 {
 font-size: 48px;
 font-weight: 300;
-margin-bottom: 0.75em;
+margin-bottom: 20px !important;
 margin: 0 auto;
 width: 248px;
 text-transform: uppercase;
+line-height: 0.7em;
 }
 
 #block-views-nodequeue-2-block .view-header {
@@ -594,20 +658,11 @@ margin-right: 100px;
 #block-views-nodequeue-2-block .views-row-1, #block-views-nodequeue-2-block .views-row-2, #block-views-nodequeue-2-block .views-row-3 {
 width: 230px;
 float: left;
+height: 141px;
 }
 
 #block-views-nodequeue-2-block .views-row-1, #block-views-nodequeue-2-block .views-row-2 {
 margin-right: 100px;
-}
-
-#block-views-nodequeue-2-block .views-row-1, #block-views-nodequeue-2-block .views-row-2, #block-views-nodequeue-2-block .views-row-3 {
-width: 230px;
-float: left;
-}
-
-#block-views-nodequeue-2-block .views-row-1, #block-views-nodequeue-2-block .views-row-2, #block-views-nodequeue-2-block .views-row-3 {
-width: 230px;
-float: left;
 }
 
 #block-views-nodequeue-2-block .views-row-4 {
@@ -628,6 +683,31 @@ float: left;
 
 /*Footer styles*/
 
+#primary-footer .row > div.span3:nth-of-type(1n+0) {
+    width: 235px;
+}
+
+#primary-footer .row > div.span3:nth-of-type(2n+0) {
+    width: 215px;
+}
+
+#primary-footer .row > div.span3:nth-of-type(3n+0) {
+    width: 211px;
+}
+
+#primary-footer .row > div.span3:nth-of-type(4n+0) {
+    width: 299px;
+}
+
+#footer-wrap {
+margin-bottom: 0px;
+padding-top: 13px;
+}
+
+footer {
+border-top: 13px solid #F59735;
+}
+
 #primary-footer li {
 line-height: 1.5em;
 }
@@ -643,17 +723,15 @@ margin-left: 0px;
 }
 
 #primary-footer {
-padding: 20px;
-width: 960px;
+padding-top: 47px;
+width: 965px;
+padding-left: 0px;
+padding-right: 0px;
+padding-bottom: 12px;
 }
 
 .not-front footer .span3:nth-child(2n+0) {
 width: 210px;
-margin-left: 0px;
-}
-
-#primary-footer > .row > div.span3:nth-child(4n+0) {
-width: 324px;
 margin-left: 0px;
 }
 
@@ -707,6 +785,8 @@ list-style-type: none;
 footer ul li a {
 	color: #fff;
 	font-size: 11px;
+	width: 80px;
+	display: block;
 }
 
 footer li a.active {
@@ -721,11 +801,43 @@ width: 48%;
 
 .region-footer-col-1 div.block:first-of-type {
 margin-right:0px;
+width: 110px;
+}
+
+#block-menu-menu-services-menu {
+width: 125px;
+}
+
+#block-menu-menu-industries--2 {
+width: 107px;
+}
+
+#block-menu-menu-insights {
+width: 108px;
+}
+
+#block-menu-menu-careers {
+width: 106px;
+}
+
+#block-menu-menu-our-works {
+width: 105px;
+}
+
+#block-menu-menu-press {
+width: 111px;
+}
+
+#block-menu-menu-contact {
+width: 85px;
+}
+
+#block-menu-menu-global-offices--2 {
+width: 106px;
 }
 
 .region-footer-col-2 .block {
 float: left;
-width: 48%px;
 }
 
 .region-footer-col-2 div.block:first-of-type {
@@ -734,7 +846,6 @@ margin-right:0px;
 
 .region-footer-col-3 .block {
 float: left;
-width: 48%;
 }
 
 .region-footer-col-3 div.block:first-of-type {
@@ -743,7 +854,6 @@ margin-right:0px;
 
 .region-footer-col-4 .block {
 float: left;
-width: 33%;
 }
 
 .region-footer-col-4 div.block:first-of-type {
@@ -751,7 +861,7 @@ margin-right:-12px;
 }
 
 .region-footer-col-4 div.block:last-of-type {
-width: 119px;
+
 }
 
 #page-heading h2 {
@@ -893,6 +1003,11 @@ width: 712px;
 
 .region-sidebar-first {
 margin: 70px 0px 20px 0px;
+}
+
+.region-sidebar-first h2 {
+font-size: 14px;
+clear: both;
 }
 
 .page-node-93 .node-page p, .page-node-93 .node-page ul {
@@ -1038,6 +1153,12 @@ font-weight: normal;
 margin-left: 91px;
 }
 
+/*#tb-megamenu-main-menu .tb-megamenu .nav li.dropdown.active > .dropdown-toggle, #tb-megamenu-main-menu .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle, #tb-megamenu-main-menu .tb-megamenu .nav > li.dropdown.open.active > a:hover {
+background-color: #fff;
+border-color: #81a1c7;
+color: #81A1C7 !important;
+}*/
+
 .tb-megamenu .nav li.dropdown.active > .dropdown-toggle, .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle, .tb-megamenu .nav > li.dropdown.open.active > a:hover {
 background-color: #fff;
 border-color: #81a1c7;
@@ -1090,6 +1211,33 @@ margin-bottom: 10px;
 
 .region-sidebar-first .view-jobs {
     padding-bottom:20px;
+}
+/*Media Services etc.*/
+
+#node-64 .node-title, #node-65 .node-title,#node-66 .node-title,#node-67 .node-title,#node-68 .node-title {
+float: right;
+position: relative;
+left: -319px;
+}
+
+#node-65 .node-title {
+left: -276px;
+}
+
+#node-66 .node-title {
+left: -263px;
+}
+
+#node-67 .node-title {
+left: -130px;
+}
+
+#node-68 .node-title {
+left: -413px;
+}
+
+#node-64 .node-title a, #node-65 .node-title a, #node-66 .node-title a, #node-67 .node-title a, #node-68 .node-title a {
+font-size: 52px;
 }
 
 /*Emerging media*/
@@ -1436,7 +1584,9 @@ border-radius: 1px !important;
 
 /*Breadcrumb*/
 #block-easy-breadcrumb-easy-breadcrumb {
+margin: 0 auto;
 margin-bottom: 40px;
+width: 455px;
 }
 
 /*Contact page style*/
@@ -1513,4 +1663,33 @@ background-image: url(/sites/theorem.drupalflex.com/themes/theorem/images/round-
 position: absolute;
 top: 616px;
 width: 511px;
+}
+
+
+[class*="span"] {
+float: left;
+min-height: 1px;
+margin-left: 0px;
+}
+
+[class*="row"] {
+margin-left: 0px;
+}
+
+/*Slider*/
+
+.flexslider .slides img {
+width: 1413px;
+display: block;
+margin: 0 auto;
+max-width: 1413px;
+}
+
+.flexslider .slides > li {
+display: none;
+-webkit-backface-visibility: hidden;
+}
+
+#block-views-image-slider-block {
+margin-bottom: -18px;
 }

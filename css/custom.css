@@ -131,14 +131,6 @@ header {
 	margin-bottom: 17px;
 }
 
-.node-title {
-margin-bottom: 10px !important;
-}
-
-.demo-request {
-margin-top: 37px;
-}
-
 header > div.row:nth-of-type(2n+0) > .span12 {
 background: none;
 height: 1px;
@@ -199,6 +191,8 @@ font-weight: normal;
 padding: 0px 5px !important;
 display: block !important;
 width: 95%;
+border: none !important;
+text-align: left;
 }
 
 
@@ -215,12 +209,14 @@ padding: 0px 20px;
 
 /*Menu links*/
 
-ul.menu li.active a, .main-menu-nav li.active a, .main-menu-nav li.active a:hover, .main-menu-nav li a:hover {
+.main-menu-nav li.active a:hover, .main-menu-nav li a:hover {
 background: none;
-color: #fff !important;
+color: #81A1C7 !important;
 border-bottom: 5px solid #81a1c7;
 }
-
+ul.menu li.active a, .main-menu-nav li.active a {
+  color: #fff !important;
+}
 .main-menu-nav li a {
 color: #81a1c7;
 padding: 16px 25px 28px 25px;
@@ -308,21 +304,24 @@ padding-top: 7px;
 margin-top: -4px;
 }
 
-#block-tb-megamenu-menu-top-menu .tb-megamenu .nav > .active > a:hover, #block-tb-megamenu-menu-top-menu .tb-megamenu-menu-top-menu .nav > li.dropdown.open.active > a:hover {
-background-color: #7DA7D7;
-color: #FFF !important;
-padding-bottom: 10px;
-padding-top: 7px;
-margin-top: -4px;
-border:0px;
+.tb-megamenu-menu-top-menu .nav > .active > a:hover,
+.tb-megamenu-menu-top-menu .nav > li.dropdown.open.active > a:hover,
+.tb-megamenu-menu-top-menu .nav > li > a:focus,
+.tb-megamenu-menu-top-menu .nav > li > a:hover,
+.tb-megamenu-menu-top-menu .nav li.dropdown.open > .dropdown-toggle {
+  background-color: #7DA7D7;
+  color: #FFF !important;
+  padding-bottom: 10px;
+  padding-top: 7px;
+  margin-top: -4px;
+  border:0px;
 }
-
 #block-menu-menu-top-menu ul.menu li a, .tb-megamenu-menu-top-menu ul.menu li a {
 	padding: 7px 6px;
 	color: #fff;
 	border-right-width: 0px;
 	border-right-style: solid;
-	border-right-color: #FFF;	
+	border-right-color: #FFF;
 }
 
 .tb-megamenu-menu-top-menu .dropdown-menu {
@@ -373,7 +372,14 @@ background:#f8981f;
 	background:#f8981f;
 	color: #fff !important;
 }
-
+.tb-megamenu-item.level-1.mega.active > a {
+  background-color: #7DA7D7;
+  color: #FFF !important;
+  padding-bottom: 10px;
+  padding-top: 7px;
+  margin-top: -4px;
+  border:0px;
+}
 .tb-megamenu-menu-top-menu ul.menu li.active a, .tb-megamenu-menu-top-menu .main-menu-nav li.active a, .tb-megamenu-menu-top-menu .main-menu-nav li.active a:hover, .tb-megamenu-menu-top-menu .main-menu-nav li a:hover {
 background: #fff;
 color: #81a1c7 !important;
@@ -391,7 +397,8 @@ background-color: none !important;
 color: #FFF !important;
 }
 
-.tb-megamenu .nav > .active > a:hover, .tb-megamenu-menu-top-menu .nav > li.dropdown.open.active > a:hover {
+.tb-megamenu .nav > .active > a:hover,
+.tb-megamenu-menu-top-menu .nav > li.dropdown.open > a:hover {
 	background-color: #7ea6d7;
 	color: #fff !important;
 }
@@ -411,35 +418,38 @@ padding: 0px 0px;
 margin-top: -3px;
 }
 
-.tb-megamenu-menu-top-menu .dropdown-menu li:first-child > a {
+.dropdown-menu #block-menu-menu-global-offices li:first-child > a {
 background-image: url(../images/dominican-republic.png) !important;
 background-repeat: no-repeat !important;
 background-position: left center !important;
 }
 
-.tb-megamenu-menu-top-menu .dropdown-menu li:nth-of-type(2n+0) > a {
+.dropdown-menu #block-menu-menu-global-offices li:nth-of-type(2n+0) > a {
 	background-image: url(../images/india.png) !important;
 	background-repeat: no-repeat !important;
 	background-position: left center !important;
 }
 
-.tb-megamenu-menu-top-menu .dropdown-menu li:nth-of-type(3n+0) > a {
+.dropdown-menu #block-menu-menu-global-offices li:nth-of-type(3n+0) > a {
 	background-image: url(../images/united-kingdom.png) !important;
 	background-repeat: no-repeat !important;
 	background-position: left center !important;
 }
 
-.tb-megamenu-menu-top-menu .dropdown-menu li:nth-of-type(4n+0) > a {
+.dropdown-menu #block-menu-menu-global-offices li:nth-of-type(4n+0) > a {
 	background-image: url(../images/united-states.png) !important;
 	background-repeat: no-repeat !important;
 	background-position: left center !important;
 }
 
-.tb-megamenu-menu-top-menu .dropdown-menu li > a {
+.dropdown-menu #block-menu-menu-global-offices li > a {
 padding: 0px 5px 0px 25px !important;
 width:84%;
 }
 
+.tb-megamenu .nolink {
+  display: none;
+}
 /*Slideshow styles*/
 
 .flex-caption {
@@ -948,9 +958,9 @@ float: left;
 	height: 0px;
 	width: 0px;
     content: "";
-    
+
    display: block;
-    
+
    float: right;
    /* width:30px; */
    position: relative;
@@ -1027,7 +1037,7 @@ font-size: 20px;
 	   -moz-box-shadow: 0 8px 6px -6px black;
 	        box-shadow: 0 8px 6px -6px #ccc;
 			padding-bottom: 5px;
-			
+
 }
 
 #block-block-16 .content, .region.region-after-content .block, .region.region-sidebar-first .block {
@@ -1053,7 +1063,7 @@ list-style-type: none;
     top: 7px;
     position: relative;
 }
-			
+
 .region.region-after-content h2 {
 font-weight: normal;
 font-size: 23px;
@@ -1171,31 +1181,31 @@ color: #fff;
 .page-node-102 #page-wrap > div.row > div.span12:first-of-type {
 	background-image: url(../images/publishers.jpg);
 	background-repeat: no-repeat;
-	background-position: left 13%;	
+	background-position: left 13%;
 }
 
 .page-node-103 #page-wrap > div.row > div.span12:first-of-type {
 	background-image: url(../images/networks.jpg);
 	background-repeat: no-repeat;
-	background-position: left 13%;	
+	background-position: left 13%;
 }
 
 .page-node-104 #page-wrap > div.row > div.span12:first-of-type {
 	background-image: url(../images/technology-providers.jpg);
 	background-repeat: no-repeat;
-	background-position: left 13%;	
+	background-position: left 13%;
 }
 
 .page-node-105 #page-wrap > div.row > div.span12:first-of-type {
 	background-image: url(../images/agencies.jpg);
 	background-repeat: no-repeat;
-	background-position: left 13%;	
+	background-position: left 13%;
 }
 
 .page-node-106 #page-wrap > div.row > div.span12:first-of-type {
 	background-image: url(../images/marketers.jpg);
 	background-repeat: no-repeat;
-	background-position: -5% 13%;	
+	background-position: -5% 13%;
 }
 
 /*Jobs list*/
@@ -1330,13 +1340,13 @@ color: #434343;
 	border-width: 5px 0px 5px 5px;
 	height: 0px;
 	width: 0px;
-    content: "";    
-   display: block;    
+    content: "";
+   display: block;
    float: right;
-   
+
     position: relative;
    top: 7px;
-   
+
     left: 8px;
 }
 
@@ -1383,13 +1393,13 @@ color: #434343;
 	border-width: 5px 0px 5px 5px;
 	height: 0px;
 	width: 0px;
-    content: "";    
-   display: block;    
+    content: "";
+   display: block;
    float: right;
-   
+
     position: relative;
    top: 7px;
-   
+
     left: 8px;
 }
 
@@ -1524,7 +1534,7 @@ margin-top: 20px;
 .page-node-112 .node-title, /*.page-node-113 .node-title, */.page-node-114 .node-title {
 margin-bottom: 0px;
 float: right;
-left: -430px;
+left: -390px;
 position: relative;
 }
 
@@ -1583,12 +1593,20 @@ border-radius: 1px !important;
 }
 
 /*Breadcrumb*/
+.front #block-easy-breadcrumb-easy-breadcrumb {
+  display: none;
+}
 #block-easy-breadcrumb-easy-breadcrumb {
 margin: 0 auto;
 margin-bottom: 40px;
-width: 455px;
 }
-
+#block-easy-breadcrumb-easy-breadcrumb span {
+  color: #0088CC;
+}
+.easy-breadcrumb_segment-front {
+  text-transform: uppercase;
+  color: #000;
+}
 /*Contact page style*/
 
 .page-node-131 #block-system-main {
@@ -1692,4 +1710,19 @@ display: none;
 
 #block-views-image-slider-block {
 margin-bottom: -18px;
+}
+
+/*Region sidebar menu*/
+.region-sidebar-first .menu li {
+  margin-bottom: 5px;
+}
+.region-sidebar-first .menu li a,
+.region-sidebar-first .menu li span {
+  font-family: 'Titillium Web';
+  font-size: 12px;
+  color: #444444;
+}
+.region-sidebar-first .menu li a.active,
+.region-sidebar-first .menu li a:hover {
+  color: #82a1c4;
 }

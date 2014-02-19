@@ -1,11 +1,12 @@
 name = Theorem
-description = A sub-theme of Expressa 
+description = A sub-theme of Expressa
 core = 7.x
 engine = phptemplate
-version = 1.x 
+version = 1.x
 base theme = expressa
 
 stylesheets[all][] = css/custom.css
+scripts[] = js/functions.css
 
 ; Define header block regions.
 regions[header] = Header
@@ -21,6 +22,7 @@ regions[menu_social] = Menu Social
 regions[content] = Content
 regions[sidebar_first] = First Sidebar
 regions[sidebar_second] = Second Sidebar
+regions[sidebar_last] = Last Sidebar
 regions[after_content] = After Content
 regions[highlight] = Highlight
 

@@ -166,8 +166,14 @@
        <?php if (isset($page['sidebar_first'])) : ?>
     <div class="span3">
       <?php print render($page['sidebar_first']); ?>
+        <?php if (isset($page['sidebar_last'])) : ?>
+      <?php print render($page['sidebar_last']); ?>
+    <?php endif; ?>
+    
     </div>
     <?php endif; ?>
+    
+
 
 		  <?php if (isset($page['content'])) : ?>
 		    <?php print render($page['content']); ?>

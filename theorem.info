@@ -6,7 +6,7 @@ version = 1.x
 base theme = expressa
 
 stylesheets[all][] = css/custom.css
-scripts[] = js/functions.css
+scrupts[] = js/functions.css
 
 ; Define header block regions.
 regions[header] = Header
@@ -23,6 +23,7 @@ regions[content] = Content
 regions[sidebar_first] = First Sidebar
 regions[sidebar_second] = Second Sidebar
 regions[sidebar_last] = Last Sidebar
+regions[sidebar_after_last] = After Last Sidebar
 regions[after_content] = After Content
 regions[highlight] = Highlight
 

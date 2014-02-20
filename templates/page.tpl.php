@@ -170,6 +170,10 @@
       <?php print render($page['sidebar_last']); ?>
     <?php endif; ?>
     
+    <?php if (isset($page['sidebar_after_last'])) : ?>
+      <?php print render($page['sidebar_after_last']); ?>
+    <?php endif; ?>
+    
     </div>
     <?php endif; ?>
     

@@ -20,7 +20,7 @@ if ($items = field_get_items('node', $node, 'field_image')) {
 
   <?php print render($title_prefix); ?>
 
-    <h2 class="node-title"<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+    <h2 class="node-title"<?php print $title_attributes; ?>><?php print $title; ?></h2>
  
   <?php print render($title_suffix); ?>
   
